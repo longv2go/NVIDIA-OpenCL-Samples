@@ -13,7 +13,7 @@ function make_ocl() {
         cd $dir/"NVIDIA GPU Computing SDK"/OpenCL
         make $1
         if [ $? -ne 0 ]; then
-            echo "build ${dir} failed"
+            echo -e "\033[31m${action} [${dir}] failed!\033[0m"
             exit 1
         fi
         cd -
